@@ -13,20 +13,32 @@ The principle of Monte Carlo simulation option pricing can be understood in this
 # 2. prediction results and option trading strategy
 ## 2.1 data and statistics
 The correlation among three kinds of volatilities can be seen in the Table below.
+
 |                      |IV               |Realized Volatility  |VIX           |
 |----------------------|-----------------|---------------------|--------------|
 |IV                    |1                |0.5028               |0.7220        |
 |Realized Volatility   |0.5028           |1                    |0.6988        |
 |VIX                   |0.7220           |0.6899               |1             |
 
-The figure below shows the comparisons between predicted and sample true values based on ABC-BP neural network model.
+The figure below shows the comparisons between predicted and sample true values based on ABC-BP neural network model.This result suggests that the model have predictability.
+
 ![Image text](https://github.com/algo21-220040088/Assignment1/blob/main/screenshots/fig_1.jpg)
 
-The figure below shows the comparisons based on BP and ABC-BP neural network model optimal and true value.
+The figure below shows the comparisons based on BP and ABC-BP neural network model optimal and true value. We find that the ABC-BP neural network model is closer to the volatility index, which indicates that the volatility prediction under this method is more optimized.
+
 ![Image text](https://github.com/algo21-220040088/Assignment1/blob/main/screenshots/fig_2.jpg)
 
-The figure below shows comparison of MSE based on BP neural network model and ABC-BP neural network model.we can conclude that MSE decreases with the increase of iterations, and the MSE of ABC-BP neural network model is obviously smaller than that of BP neural network model under the optimal fitting condition.
+The figure below shows comparison of MSE based on BP neural network model and ABC-BP neural network model.we can conclude that MSE decreases with the increase of iterations, and the MSE of ABC-BP neural network model is obviously smaller than that of BP neural network model under the optimal fitting condition. Under the best fit, the MSE of the ABC-BP neural network model is significantly smaller than the BP neural network model. So, the validity of model prediction is illustrated.
+
 ![Image text](https://github.com/algo21-220040088/Assignment1/blob/main/screenshots/fig_3.jpg)
+
+The error comparison  under the three models can be seen in the Table below.
+
+|         |MSE       |MAE       |MBE      |
+|---------|----------|----------|---------|
+|BS       |0.001     |0.024     |0.001    |
+|BP       |0.000**   |0.010**   |-0.000** |
+|ABC-BP   |0.000***  |0.010**   |0.000*** |
 
 ## 2.2 out-of-sample testing
 
