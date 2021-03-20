@@ -32,7 +32,9 @@ The figure below shows comparison of MSE based on BP neural network model and AB
 
 ![Image text](https://github.com/algo21-220040088/Assignment1/blob/main/screenshots/fig_3.jpg)
 
-The error comparison  under the three models can be seen in the Table below.
+## 2.2 out-of-sample testing
+
+The error comparison  under the three models can be seen in the Table below.In this table, we show the mean square error MSE, mean absolute error MAE, mean deviation error MBE, and the calculation results of the BS model of the BP and ABC-BP neural network models from January 2017 to May 2018. It can be seen from Table 3 that the MSE, MAE and MBE of the ABC-BP neural network model are the smallest among the three models. Therefore, the overall performance of the ABC-BP neural network model proposed in this paper is better than the BP neural network model and the BS model.
 
 |         |MSE       |MAE       |MBE      |
 |---------|----------|----------|---------|
@@ -40,5 +42,14 @@ The error comparison  under the three models can be seen in the Table below.
 |BP       |0.000**   |0.010**   |-0.000** |
 |ABC-BP   |0.000***  |0.010**   |0.000*** |
 
-## 2.2 out-of-sample testing
+Finally, the volatility data is introduced into the montecarlo simulation to calculate the predicted option price and yield (including delta and vega). The prediction results are shown in Table below.
+
+|                 |Maximum  |Minimum  |Mean     | Median   |Std.Dev  |
+|-----------------|---------|---------|---------|----------|---------|
+|Underlying price |2872.820 |2257.830 |2530.086 | 2648.980 |234.174  |
+|Call             |1611.265 | 108.0463| 1088.706| 1334.268 |395.1518 |
+|Put              |1121.573 | 110.7903|633.1015 | 593.3589 | 292.2569|
+|delta            |0.970963 |0.536306 |0.757982 | 0.812611 |0.126825 |
+|vega             |1234.165 | 171.0937| 864.9403| 876.3806 |199.771  |
+
 
