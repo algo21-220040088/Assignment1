@@ -52,4 +52,7 @@ Finally, the volatility data is introduced into the montecarlo simulation to cal
 |delta            |0.970963 |0.536306 |0.757982 | 0.812611 |0.126825 |
 |vega             |1234.165 | 171.0937| 864.9403| 876.3806 |199.771  |
 
-
+# 3.conslusion
+In this paper, we examine the IV predictability of the artificial bee colony improved model (ABC-BP neural network model) and apply the model to three popular options trading strategies. We documented two main findings.
+- the BP neural network model is inherently slow in convergence. The model is easy to fall into local optimum and easy to overfit. The accuracy of implied volatility is low while the training time is prolonged. The experimental results show that the ABC-BP neural network model is superior to the BP neural network model in terms of speed and predictability, and also superior to the traditional GARCH model.
+- we demonstrate that the ABC-BP neural network model is applicable to options trading strategies, such as cross-seat, butterfly, and calendar spreads. The performance of this model is better than that of the traditional GARCH model. We believe that this conclusion is useful for option traders to select trading strategies and specific trading products.
