@@ -52,6 +52,13 @@ Finally, the volatility data is introduced into the montecarlo simulation to cal
 |delta            |0.970963 |0.536306 |0.757982 | 0.812611 |0.126825 |
 |vega             |1234.165 | 171.0937| 864.9403| 876.3806 |199.771  |
 
+## 2.3  Application of predicted option price in three option strategies
+In this section, we apply the model's predictable results to major options trading strategies: long, butterfly, and calendar spreads to verify the validity of the model's predictions. In addition, we apply our model to fluctuation momentum and mean recovery. Momentum refers to short-term volatility behavior, while mean reversion refers to long-term behavior. We chose three-day volatility momentum cycles and used 10% and 90% volatility movements as benchmarks for mean reregression.
+
+the figure below shows the comparison of volatility based on different four models (Robustness Test).We find that the decline in returns is due to the increasing value of volatility prediction error, especially for the GARCH model, but not for the ABC-BP neural network model. Cash options are still the best performers. These results show that ABC-BP neural network model has better performance than GARCH model.
+
+![Image text](https://github.com/algo21-220040088/Assignment1/blob/main/screenshots/fig_4.jpg)
+
 # 3.conslusion
 In this paper, we examine the IV predictability of the artificial bee colony improved model (ABC-BP neural network model) and apply the model to three popular options trading strategies. We documented two main findings.
 - the BP neural network model is inherently slow in convergence. The model is easy to fall into local optimum and easy to overfit. The accuracy of implied volatility is low while the training time is prolonged. The experimental results show that the ABC-BP neural network model is superior to the BP neural network model in terms of speed and predictability, and also superior to the traditional GARCH model.
